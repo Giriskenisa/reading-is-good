@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "f155120b-eef0-4847-a236-7506911f23b6",
+		"name": "getirCollections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"getir\",\n\t\"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Get token"
+			},
+			"response": []
+		},
+		{
+			"name": "add-book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZXRpciIsImlhdCI6MTYzMzcxMDMxOSwiZXhwIjoxNjMzNzEwOTE5fQ.QqLIDymZdG2cbTESuSEpkeB1vhlCuomYXZbRPJajc5g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMjAyMSIsImV4cCI6MTYzMjc0NTA1NSwiaWF0IjoxNjMyNzM3ODU1fQ.KArLtLtLMu2cBagZvxqRvG8uIozZFRTCf_4xBdMlf-w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serial\": \"563219821984\",\r\n    \"title\": \"Nietzche Ağladığında\",\r\n    \"edition\": \"1\",\r\n    \"author\": \"Irvin D. Yalom\",\r\n    \"publication\": \"Can\",\r\n    \"price\": \"35\",\r\n    \"stock\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/book/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"add"
+					]
+				},
+				"description": "Add Book Json"
+			},
+			"response": []
+		},
+		{
+			"name": "add-book-as-list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZXRpciIsImlhdCI6MTYzMzcxMTMzOCwiZXhwIjoxNjMzNzExOTM4fQ.S7G90DeZJe4dzh6tJmIjvw81iYBh3GVGr6nRcRabUis",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMjAyMSIsImV4cCI6MTYzMjc0NTA1NSwiaWF0IjoxNjMyNzM3ODU1fQ.KArLtLtLMu2cBagZvxqRvG8uIozZFRTCf_4xBdMlf-w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n        {\r\n            \"serial\": \"123123123\",\r\n            \"title\": \"Kızıl Veba\",\r\n            \"edition\": \"1\",\r\n            \"author\":\"Jack London\" ,\r\n            \"publication\": \"Can\",\r\n            \"price\": \"150\",\r\n            \"stock\": 20\r\n        },\r\n        {\r\n            \"serial\": \"145145145\",\r\n            \"title\": \"Kuyucaklı Yusuf\",\r\n            \"edition\": \"1\",\r\n            \"author\": \"Sabahattin Ali\",\r\n            \"publication\": \"Can\",\r\n            \"price\": \"70\",\r\n            \"stock\": 30\r\n        }\r\n    ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/book/add/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"add",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-Book-Stock-Number",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZXRpciIsImlhdCI6MTYzMzcxMjYzMSwiZXhwIjoxNjMzNzEzMjMxfQ.0cnyUscDQZBCH4k5qLIPK00X7v6ZwRpOmehDspfTQSQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/book/update-stock/123123123?stock=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"update-stock",
+						"123123123"
+					],
+					"query": [
+						{
+							"key": "stock",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMjAyMSIsImV4cCI6MTYzMjc0NTA1NSwiaWF0IjoxNjMyNzM3ODU1fQ.KArLtLtLMu2cBagZvxqRvG8uIozZFRTCf_4xBdMlf-w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": \"8768101\",\r\n    \"customerId\": \"test@gmail.com\",\r\n    \"books\": [\r\n        {\"serial\":\"563219821984\",\r\n        \"number\":2},\r\n        {\"serial\":\"123123123\",\r\n        \"number\":3}\r\n    ],\r\n    \"totalAmount\":\"2567\",\r\n    \"totalBooks\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/order/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-orders-between-startDate- endDate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZXRpciIsImlhdCI6MTYzMzc5MzkyMCwiZXhwIjoxNjMzNzk0NTIwfQ.zkN2sf_lzDKIfBtJKtDnp9P-YwRbr70o0Oz1720wltc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMjAyMSIsImV4cCI6MTYzMjc1MDQ4MiwiaWF0IjoxNjMyNzQzMjgyfQ.O0kJsqYPhLSCxoTLpof4rCHaM81tOX2QhKrqQVLkCvQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/order/between-date?start=08/08/2021&end=10/10/2021",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"between-date"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "08/08/2021"
+						},
+						{
+							"key": "end",
+							"value": "10/10/2021"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-statistics-for-customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZXRpciIsImlhdCI6MTYzMzc5NjE3MCwiZXhwIjoxNjMzNzk2NzcwfQ.eyNBRVT8MDBqnZiO--uYG19NTJqWNfADvl0NSDSuVmg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMjAyMSIsImV4cCI6MTYzMjc1MDQ4MiwiaWF0IjoxNjMyNzQzMjgyfQ.O0kJsqYPhLSCxoTLpof4rCHaM81tOX2QhKrqQVLkCvQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/statistics?customerId=test@gmail.com&year=2021",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"statistics"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "test@gmail.com"
+						},
+						{
+							"key": "year",
+							"value": "2021"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

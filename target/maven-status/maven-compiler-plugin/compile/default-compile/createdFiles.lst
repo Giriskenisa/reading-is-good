@@ -1,0 +1,17 @@
+com/getir/readingisgood/security/controller/AuthController.class
+com/getir/readingisgood/controller/OrderController.class
+com/getir/readingisgood/security/SecurityConfig.class
+com/getir/readingisgood/entity/User.class
+com/getir/readingisgood/entity/Address.class
+com/getir/readingisgood/controller/CustomerController.class
+com/getir/readingisgood/security/filter/JwtUtil.class
+com/getir/readingisgood/security/filter/JwtRequestFilter.class
+com/getir/readingisgood/ReadingisgoodApplication.class
+com/getir/readingisgood/entity/Order.class
+com/getir/readingisgood/security/model/AuthResponse.class
+com/getir/readingisgood/entity/NewBooksOrder.class
+com/getir/readingisgood/security/model/LoginRequest.class
+com/getir/readingisgood/entity/Book.class
+com/getir/readingisgood/controller/StatisticsController.class
+com/getir/readingisgood/controller/BookController.class
+com/getir/readingisgood/security/BookUserDetailsService.class

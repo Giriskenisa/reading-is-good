@@ -1,0 +1,17 @@
+/Users/isagirisken/Downloads/readingisgood/src/main/java/com/getir/readingisgood/security/filter/JwtUtil.java
+/Users/isagirisken/Downloads/readingisgood/src/main/java/com/getir/readingisgood/controller/StatisticsController.java
+/Users/isagirisken/Downloads/readingisgood/src/main/java/com/getir/readingisgood/entity/NewBooksOrder.java
+/Users/isagirisken/Downloads/readingisgood/src/main/java/com/getir/readingisgood/entity/Address.java
+/Users/isagirisken/Downloads/readingisgood/src/main/java/com/getir/readingisgood/controller/BookController.java
+/Users/isagirisken/Downloads/readingisgood/src/main/java/com/getir/readingisgood/security/BookUserDetailsService.java
+/Users/isagirisken/Downloads/readingisgood/src/main/java/com/getir/readingisgood/security/filter/JwtRequestFilter.java
+/Users/isagirisken/Downloads/readingisgood/src/main/java/com/getir/readingisgood/controller/CustomerController.java
+/Users/isagirisken/Downloads/readingisgood/src/main/java/com/getir/readingisgood/security/model/AuthResponse.java
+/Users/isagirisken/Downloads/readingisgood/src/main/java/com/getir/readingisgood/security/SecurityConfig.java
+/Users/isagirisken/Downloads/readingisgood/src/main/java/com/getir/readingisgood/entity/Order.java
+/Users/isagirisken/Downloads/readingisgood/src/main/java/com/getir/readingisgood/entity/Book.java
+/Users/isagirisken/Downloads/readingisgood/src/main/java/com/getir/readingisgood/controller/OrderController.java
+/Users/isagirisken/Downloads/readingisgood/src/main/java/com/getir/readingisgood/security/controller/AuthController.java
+/Users/isagirisken/Downloads/readingisgood/src/main/java/com/getir/readingisgood/entity/User.java
+/Users/isagirisken/Downloads/readingisgood/src/main/java/com/getir/readingisgood/ReadingisgoodApplication.java
+/Users/isagirisken/Downloads/readingisgood/src/main/java/com/getir/readingisgood/security/model/LoginRequest.java
